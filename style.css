@@ -73,8 +73,8 @@ a.active {
   margin-top: 10px;
   word-spacing: 20px;
 }
-.minus{
-    font-size:40px;
+.minus {
+  font-size: 40px;
 }
 .booking-form .calculations {
   margin: 10px 0;
@@ -123,4 +123,15 @@ a.active {
 .amount {
   display: flex;
   justify-content: space-between;
+}
+
+#tickets-details {
+  display: none;
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin-top: 200px;
+  letter-spacing: 2px;
+  line-height: 50px;
 }
