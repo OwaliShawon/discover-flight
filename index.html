@@ -60,10 +60,8 @@
                 </div>
                 <div class="plus-minus-btn">
                     <p>
-                        <span
-                            onclick="quantityChanges(true, 'firstClass')">+</span>
-                        <span onclick="quantityChanges(false, 'firstClass')"
-                            class="minus">-</span>
+                        <button onclick="quantityChanges(true, 'firstClass')" class="btn-style"> + </button>
+                        <button onclick="quantityChanges(false, 'firstClass')" class="btn-style"> - </button> 
                     </p>
                 </div>
             </div>
@@ -75,8 +73,8 @@
                         value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span onclick="quantityChanges(true, 'ecoClass')">+</span>
-                        <span onclick="quantityChanges(false, 'ecoClass')" class="minus">-</span>
+                    <p> <button onclick="quantityChanges(true, 'ecoClass')" class="btn-style"> + </button>
+                        <button onclick="quantityChanges(false, 'ecoClass')" class="btn-style"> - </button> 
                     </p>
                 </div>
             </div>
@@ -122,18 +120,29 @@
 
     <!-- tickets details after pressing book now button -->
     <section id="tickets-details">
-        <h2>Your Ticket Confirmation</h2>
-       <div class="div">
-        <p>First Class Class Seats: <span id="first-class-final-quantity"></span> </p>
-       </div>
-       <div class="div">
-        <p>Economy Class Seats: <span id="economic-class-final-quantity"></span> </p>
-       </div>
-       <div class="div">
-        <p>Total Cost: <span id="output-total"></span> </p>
-       </div>
+        <table>
+            <thead>
+                <h1>Your tickets Summery</h1>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>First Class Tickets: </td>
+                    <td id="first-class-final-quantity"></td>
+                </tr>
+                <tr>
+                    <td>Economy Class Tickets:</td>
+                    <td id="economy-class-final-quantity"></td>
+                </tr>
+                <tr>
+                    <td>Total Prices: </td>
+                    <td></td>
+                </tr>
+                
+            </tbody>
+            
+        </table>   
     </section>
-
+    
     <!--Thank You-->
     <script src="script.js"></script>
 </body>

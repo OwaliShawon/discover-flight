@@ -35,12 +35,16 @@ document.getElementById('book-now').addEventListener('click', function(){
 
     const ticketsDetails = document.getElementById('tickets-details');
     ticketsDetails.style.display = 'block';
+// take count and total prices for first classes
+    const firstClassCount = document.getElementById('firstClass-ticket-quantity');
+    allFirstClass = parseInt(firstClassCount.value);
+    document.getElementById('first-class-final-quantity').innerText = allFirstClass;
+// economy classes final output
+    const ecoClassCount = document.getElementById('firstClass-ticket-quantity');
+    allEcoClass = parseInt(ecoClassCount.value);
+    document.getElementById('economy-class-final-quantity').innerText = allFirstClass;
 
-    const firstClassFinalQuantityNo = document.getElementById('first-class-final-quantity');
-    const firstClassFinalQuantityCount = parseInt(firstClassFinalQuantityNo.innerText);
-    firstClassFinalQuantityCount = document.getElementById('firstClass-ticket-quantity');
-    firstClassFinalQuantityNo = firstClassFinalQuantityCount;
 
-
+    
     // console.log('book now works');
 })
