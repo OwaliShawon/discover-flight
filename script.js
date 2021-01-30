@@ -7,10 +7,8 @@
 //     quantityChanges(false);
 // })
 
-
-
-function quantityChanges(isIncrease) {
-    const ticketQuantityInput = document.getElementById('ticket-quantity');
+function quantityChanges(isIncrease, classp) {
+    const ticketQuantityInput = document.getElementById(classp + '-ticket-quantity');
     const ticketQuantityNo = parseInt(ticketQuantityInput.value);
     let ticketQuantityNewNoCount = 0;
     if (isIncrease == true) {
@@ -21,13 +19,20 @@ function quantityChanges(isIncrease) {
     }
 
     ticketQuantityInput.value = ticketQuantityNewNoCount;
-    document.getElementById('ticket-quantity').innerText = (ticketQuantityNewNoCount);
-    const totalPrice = ticketQuantityNewNoCount * 150;
-    document.getElementById('sub-total').innerText = (totalPrice);
+    document.getElementById(classp + '-ticket-quantity').innerText = (ticketQuantityNewNoCount);
+    let totalPrice = 0;
+    if(classp == 'firstClass'){
+        totalPrice = ticketQuantityNewNoCount * 150;
+    }
+    if(classp == 'ecoClass'){
+        totalPrice = ticketQuantityNewNoCount * 100;
+    }
+    // const totalPrice = ticketQuantityNewNoCount * 150;
+    document.getElementById('sub-total').innerText = ('$' + totalPrice);
     const vat = totalPrice * .10;
-    document.getElementById('vat').innerText = (vat);
+    document.getElementById('vat').innerText = ('$' + vat);
     const grandTotal = totalPrice + vat;
-    document.getElementById('grand-total').innerText = grandTotal;
+    document.getElementById('grand-total').innerText = '$' + grandTotal;
 
 }
 
