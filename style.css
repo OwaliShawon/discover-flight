@@ -130,9 +130,17 @@ a.active {
   display: none;
   height: 100%;
   width: 100%;
-  color: white;
-  text-align: center;
-  margin-top: 200px;
+  color: blue;
+  margin-top: 50px;
+  padding: 50px;
   letter-spacing: 2px;
   line-height: 50px;
+}
+#table {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  background-repeat: no-repeat;
 }

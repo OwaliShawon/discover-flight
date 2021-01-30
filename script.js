@@ -16,7 +16,7 @@ function quantityChanges(isIncrease, classp) {
 }
 
 // total ticket prices, vat, prices including vat 
-function calculateTotal() {  
+function calculateTotal() {
     const fisrtClassTotalQuantity = document.getElementById('firstClass-ticket-quantity').value;
     const ecoClassTotalQuantity = document.getElementById('ecoClass-ticket-quantity').value;
     const totalPrice = fisrtClassTotalQuantity * 150 + ecoClassTotalQuantity * 100;
@@ -29,22 +29,19 @@ function calculateTotal() {
 }
 
 // book now button handler
-document.getElementById('book-now').addEventListener('click', function(){
+document.getElementById('book-now').addEventListener('click', function () {
     const bookArea = document.getElementById('book-area');
     bookArea.style.display = 'none';
 
     const ticketsDetails = document.getElementById('tickets-details');
     ticketsDetails.style.display = 'block';
-// take count and total prices for first classes
+
+    // take count and total prices for first classes
     const firstClassCount = document.getElementById('firstClass-ticket-quantity');
     allFirstClass = parseInt(firstClassCount.value);
     document.getElementById('first-class-final-quantity').innerText = allFirstClass;
-// economy classes final output
-    const ecoClassCount = document.getElementById('firstClass-ticket-quantity');
+    // economy classes final output
+    const ecoClassCount = document.getElementById('ecoClass-ticket-quantity');
     allEcoClass = parseInt(ecoClassCount.value);
-    document.getElementById('economy-class-final-quantity').innerText = allFirstClass;
-
-
-    
-    // console.log('book now works');
+    document.getElementById('economy-class-final-quantity').innerText = allEcoClass;
 })
