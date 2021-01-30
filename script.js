@@ -10,6 +10,7 @@
 function quantityChanges(isIncrease, classp) {
     const ticketQuantityInput = document.getElementById(classp + '-ticket-quantity');
     const ticketQuantityNo = parseInt(ticketQuantityInput.value);
+
     let ticketQuantityNewNoCount = 0;
     if (isIncrease == true) {
         ticketQuantityNewNoCount = ticketQuantityNo + 1;
@@ -19,20 +20,25 @@ function quantityChanges(isIncrease, classp) {
     }
 
     ticketQuantityInput.value = ticketQuantityNewNoCount;
-    document.getElementById(classp + '-ticket-quantity').innerText = (ticketQuantityNewNoCount);
-    let totalPrice = 0;
-    if(classp == 'firstClass'){
-        totalPrice = ticketQuantityNewNoCount * 150;
-    }
-    if(classp == 'ecoClass'){
-        totalPrice = ticketQuantityNewNoCount * 100;
-    }
+    // document.getElementById(classp + '-ticket-quantity').innerText = (ticketQuantityNewNoCount);
+
+    // let totalPrice = 0;
+    // if(classp == 'firstClass'){
+    //     totalPrice = ticketQuantityNewNoCount * 150;
+    // }
+    // if(classp == 'ecoClass'){
+    //     totalPrice = ticketQuantityNewNoCount * 100;
+    // }
     // const totalPrice = ticketQuantityNewNoCount * 150;
+    const fisrtClassTotalQuantity = document.getElementById('firstClass-ticket-quantity').value;
+    const ecoClassTotalQuantity = document.getElementById('ecoClass-ticket-quantity').value;
+    const totalPrice = fisrtClassTotalQuantity * 150 + ecoClassTotalQuantity * 100; 
     document.getElementById('sub-total').innerText = ('$' + totalPrice);
     const vat = totalPrice * .10;
     document.getElementById('vat').innerText = ('$' + vat);
     const grandTotal = totalPrice + vat;
     document.getElementById('grand-total').innerText = '$' + grandTotal;
+
 
 }
 
